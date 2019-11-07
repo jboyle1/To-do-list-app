@@ -5,6 +5,7 @@ from datetime import datetime
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 db = SQLAlchemy(app)
+app.secret_key = os.getenv("SECRET", "randomstring123")
 
 
 class Todo(db.Model):
@@ -64,4 +65,5 @@ def update(id):
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host=os.getenv("IP", "0.0.0.0"), port=int(
+        os.getenv("PORT", "5000")), debug=False)
