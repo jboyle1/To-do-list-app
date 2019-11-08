@@ -1,56 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/main.css') }}"
-    />
-    <style>
-      body,
-      html {
-        margin: 0;
-        font-family: sans-serif;
-      }
-
-      .content {
-        margin: 0 auto;
-        width: 400px;
-      }
-
-      table,
-      td,
-      th {
-        border: 1px solid #aaa;
-      }
-
-      table {
-        border-collapse: collapse;
-        width: 100%;
-      }
-
-      th {
-        height: 30px;
-      }
-
-      td {
-        text-align: center;
-        padding: 5px;
-      }
-
-      .form {
-        margin-top: 20px;
-      }
-
-      #content {
-        width: 70%;
-      }
-    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     {% block head %}{% endblock %}
-  </head>
-  <body>
+</head>
+<body>
     {% block body %}{% endblock %}
-  </body>
+</body>
 </html>
